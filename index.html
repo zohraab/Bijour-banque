@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banque Manager</title>
+    <link rel="stylesheet" href="./css/app.css" id="colorTheme" />
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <section class="hero">
+      <h1>_Bijour Banque <span>💶</span></h1>
+      <h2 id="total"> </h2>
+    </section>
+    <section>
+      <div class="row">
+        <div class="column credit">
+          crédit : <span class="txt-color-white" id="totalCredit"></span>
+        </div>
+        <div class="column debit">
+          débit : <span class="txt-color-white" id="totalDebit"></span>
+          <span class="percent txt-color-white" id="totalDebitPercent"
+            ></span>
+        </div>
+      </div>
+      <form name="formulaire" action="#" id="form">
+        <select name="operation" id="operation">
+          <option id="credit" value="credit">+</option>
+          <option id="debit" value="debit">-</option>
+        </select>
+        <input
+          type="text"
+          name="intitule"
+          id="intitule"
+          placeholder="intitulé"
+        />
+        <input
+          type="number"
+          name="montant"
+          id="montant"
+          placeholder="montant"
+        />
+        <button type="submit">🥊</button>
+      </form>
+    </section>
+    <div class="wrapper">
+      <div class="row">
+        <div class="column">
+          <h4 class="txt-color-gazoil">crédit</h4>
+          <ul id="creditContainer">
+            <li>
+              <span class="intitule">Salaire</span>
+              <span id="salaire" class="montant txt-color-gazoil"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4 class="txt-color-red">débit</h4>
+          <ul id="debitContainer">
+            <li>
+              <span class="intitule"></span>
+              <span class="montant txt-color-red"></span>
+              <span class="percent txt-color-red"></span>
+            </li>
+            <li>
+              <span class="intitule"></span>
+              <span class="montant txt-color-red"></span>
+              <span class="percent txt-color-red"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
